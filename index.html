@@ -1,557 +1,153 @@
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <!--
-  <script src="./resources/jsapi" type="text/javascript"></script>
-  <script type="text/javascript" async>google.load("jquery", "1.3.2");</script>
- -->
+    <title>Weike Zhao (赵唯珂)</title>
 
-<style type="text/css">
-  @font-face {
-   font-family: 'Avenir Book';
-   src: url("./fonts/Avenir_Book.ttf"); /* File to be stored at your site */
-   }
+    <meta name="author" content="Weike Zhao">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/robot.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+  </head>
 
-  body {
-    font-family: "Avenir Book", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight:300;
-    font-size:14px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
-  }
-  /* h1 {
-    font-weight:300;
-  } */
-  h1 {
-    font-weight:300;
-  display: flex;
-  align-items: center; /* 保证图片和文字垂直居中对齐 */
-  }
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:0%;width:60%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                Weike Zhao (赵唯珂) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+                <p>I'm a second-year PhD student at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University (SJTU)</a> , 
+                  advised by <a href="https://weidixie.github.io/index.html">Prof. Weidi Xie</a> and <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Prof. Ya Zhang</a>. 
+                
+                  <!-- I graduated with a bachelor's degree in Information Engineering from the School of Communication Engineering at Xidian University in June 2022. -->
+                </p>
+                <p>
+                  My current research interests include but not limit to Artificial Intelligence for Medical (AI4Med) and Multimodal Perception.
+                </p>
+                <p>
+                  E-mail: zwk0629[at]sjtu.edu.cn <br>
+                  WeChat: zhaoweike2000
+                </p>
 
-  .title  .title-image {
-    height: 1em; /* 使用 em 单位使图片高度与文字大小相匹配 */
-  }
-  h2 {
-    font-weight:300;
-  }
-
-  p {
-    font-weight:300;
-    line-height: 1.4;
-  }
-
-  code {
-    font-size: 0.8rem;
-    margin: 0 0.2rem;
-    padding: 0.5rem 0.8rem;
-    white-space: nowrap;
-    background: #efefef;
-    border: 1px solid #d3d3d3;
-    color: #000000;
-    border-radius: 3px;
-  }
-
-  pre > code {
-    display: block;
-    white-space: pre;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-  }
-
-  pre.prettyprint > code {
-    border: none;
-  }
-
-  .image-container {
-    display: flex; /* 使用flexbox布局 */
-    justify-content: space-around; /* 图片间隔均匀分布 */
-  }
-  .image-container img {
-    height: 300px; /* 控制所有图片的高度 */
-    width: auto; /* 宽度自适应，保持图片比例 */
-  }
-  .container {
-        display: flex;
-        align-items: center;
-        justify-content: center
-  }
-  .image {
-        flex-basis: 40%
-  }
-  .text {
-        padding-left: 20px;
-        padding-right: 20px;
-  }
-
-  .disclaimerbox {
-    background-color: #eee;
-    border: 1px solid #eeeeee;
-    border-radius: 10px ;
-    -moz-border-radius: 10px ;
-    -webkit-border-radius: 10px ;
-    padding: 20px;
-  }
-
-  video.header-vid {
-    height: 140px;
-    border: 1px solid black;
-    border-radius: 10px ;
-    -moz-border-radius: 10px ;
-    -webkit-border-radius: 10px ;
-  }
-
-  img.header-img {
-    height: 140px;
-    border: 1px solid black;
-    border-radius: 10px ;
-    -moz-border-radius: 10px ;
-    -webkit-border-radius: 10px ;
-  }
-
-  img.rounded {
-    border: 0px solid #eeeeee;
-    border-radius: 10px ;
-    -moz-border-radius: 10px ;
-    -webkit-border-radius: 10px ;
-
-  }
-
-  a:link,a:visited
-  {
-    color: #1367a7;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #208799;
-  }
-
-  td.dl-link {
-    height: 160px;
-    text-align: center;
-    font-size: 22px;
-  }
-
-  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-    box-shadow:
-            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-            5px 5px 0 0px #fff, /* The second layer */
-            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-            10px 10px 0 0px #fff, /* The third layer */
-            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-            15px 15px 0 0px #fff, /* The fourth layer */
-            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-            20px 20px 0 0px #fff, /* The fifth layer */
-            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-            25px 25px 0 0px #fff, /* The fifth layer */
-            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-    margin-left: 10px;
-    margin-right: 45px;
-  }
-
-
-  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-    box-shadow:
-            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-            5px 5px 0 0px #fff, /* The second layer */
-            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-            10px 10px 0 0px #fff, /* The third layer */
-            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-right: 30px;
-    margin-bottom: 5px;
-  }
-
-  .vert-cent {
-    position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-  }
-
-  hr
-  {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  }
-
-  .right-align {
-    text-align: right;
-  }
-
-  figure {
-    text-align: center;
-  }
-
-  figcaption {
-    font-style: italic;
-    margin-top: 5px;
-  }
-</style>
-
-	<title>RaTEScore: A Metric for Entity-Aware Radiology Text Similarity</title>
-</head>
-
-<body>
-	<br>
-	<center>
-	<span style="font-size:38px;"> <img src="resources/logo.png" alt="Description of Image" style="height: 45px; vertical-align: text-top;">RaTEScore: A Metric for Entity-Aware Radiology Text Similarity</span><br><br><br>
-	</center>
-  </table>
-  
-	<table align="center" width="560px">
-            <tbody><tr>
-      
-                    <td align="center" width="160px">
-              <center>
-                <span style="font-size:14px"><a href="https://github.com/Angelakeke/">Weike Zhao</a><sup>1,2</sup></span>
-                </center>
+                <p style="text-align:center">
+                  <a href="zwk0629@sjtu.edu.com">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=yFSlxpwAAAAJ&hl=zh-CN&oi=ao">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/Angelakeke">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/Weikezhao.jpeg">
+                  <img style="width:100%;max-width:100%;object-fit: cover; " alt="profile photo" src="images/Weikezhao.jpeg" class="hoverZoomLink">
+                </a>
                 </td>
-                    <td align="center" width="160px">
-              <center>
-                <span style="font-size:14px"><a href="https://chaoyi-wu.github.io/">Chaoyi Wu</a><sup>1,2</sup></span>
-                </center>
+              </tr>
+               </tbody></table>
+
+            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:0px;width:100%;vertical-align:middle">
+              <h2>Research</h2>        
+              <!-- <heading><b></bold>Research</b></heading> -->
+              <p>
+                <sup>*</sup> denotes equal contribution, and
+                <sup>†</sup> denotes corresponding author.
+              </p>
+            </td></tr>   
+             </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+                <td style="padding:0px;width:25%;vertical-align:middle">
+                  <img src="images/RP3D-Diag.png" width="320" height="180" style="border-style: none">
                 </td>
-                    <td align="center" width="160px">
-              <center>
-                <span style="font-size:14px"><a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a><sup>1,2</sup></span>
-                </center>
-                </td>
+                <td style="padding:10px;width:75%;vertical-align:middle">
+                  <a href="https://qiaoyu-zheng.github.io/RP3D-Diag">
+                    <papertitle>Large-scale Long-tailed Disease Diagnosis on Radiology Images</papertitle>
+                  </a>
+                 <br>
+                 <a href="https://github.com/qiaoyu-zheng/">Qiaoyu Zheng*</a>,
+                 <strong>Weike Zhao*</strong>,
+                 <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
               
-              
-		        
-          </tr>
-        </tbody></table><br>
-
-    <table align="center" width="560px">
-            <tbody><tr>
-                    <td align="center" width="50px">
-              <center>
-                    <span style="font-size:14px"></span>
-                </center>
-                </td>
-                <td align="center" width="300px">
-              <center>
-                <span style="font-size:14px"><a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a><sup>1,2</sup></span>
-                </center>
-              </td>
-                    <td align="center" width="300px">
-              <center>
-                <span style="font-size:14px"><a href="https://mediabrain.sjtu.edu.cn/">Yanfeng Wang</a><sup>1,2,<img class="round" style="width:20px" src="./resources/corresponding_fig.png"></sup></span>
-                </center>
-              </td>
-              <td align="center" width="300px">
-              <center>
-                    <span style="font-size:14px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>1,2,<img class="round" style="width:20px" src="./resources/corresponding_fig.png"></sup></span>
-                  </td>
-                  
-        </tr></tbody></table><br>
-      
-
-	  <table align="center" width="650px">
-            <tbody><tr>
-                    <td align="center" width="50px">
-              <center>
-                    <span style="font-size:14px"></span>
-                </center>
-                </td>
-                    <td align="center" width="300px">
-              <center>
-                    <span style="font-size:14px"><sup>1</sup>Shanghai Jiao Tong University</span>
-                </center>
-                </td>
-                    <td align="center" width="300px">
-              <center>
-                    <span style="font-size:14px"><sup>2</sup>Shanghai AI Laboratory</span>
-                </center>
-                </td>
-        </tr></tbody></table>
-
-
-	<table align="center" width="800px">
-            <tbody><tr>
-              <td align="center" width="150px">
-                <center>
-                  <br>
-                  <span style="font-size:20px">Code
-                    <a href="https://github.com/qiaoyu-zheng/RP3D-Diag"> [GitHub]</a>
-                  </span>
-                </center>
-              </td>
-
-              <!-- <td align="center" width="200px">
-                <center>
-                  <br>
-                  <span style="font-size:20px">
-                    Paper <a href="https://arxiv.org/pdf/2109.03230.pdf"> [arXiv]</a>
-                  </span>
-                </center>
-              </td> -->
-
-              <td align="center" width="140px">
-                <center>
-                  <br>
-                  <span style="font-size:20px">
-                    Paper <a href="https://arxiv.org/abs/2312.16151"> [arXiv]</a>
-                  </span>
-                </center>
-              </td>
-
-              <td align="center" width="240px">
-                <center>
-                  <br>
-                  <span style="font-size:20px">
-                    Model <a href="https://huggingface.co/QiaoyuZheng/RadDiag"> [HuggingFace]</a>
-                  </span>
-                </center>
-              </td>
-
-              <td align="center" width="240px">
-                <center>
-                  <br>
-                  <span style="font-size:20px">
-                    Dataset <a href="https://huggingface.co/QiaoyuZheng/RadDiag"> [HuggingFace]</a>
-                  </span>
-                </center>
-              </td>
-            </tr></tbody>
-      </table>
-     
-      <br><hr>
-      <center><h2> Abstract </h2> </center>
-      <p style="text-align:justify; text-justify:inter-ideograph;">
-            <left>
-              This paper proposes a new entity-aware lightweight metric for assessing accuracy of generated medical free-form text from AI models.
-              Our metric, termed as <strong>Ra</strong>diological Report  <strong>T</strong>ext  <strong>E</strong>valuation (<strong>RaTEScore</strong>), is designed to focus on 
-              key medical entities, such as diagnostic outcomes, anatomies, while demonstrating robustness against complex medical synonyms and 
-              sensitivity to negation expressions. 
-              Technically, we establish a new large-scale medical NER dataset <strong>RaTE-NER</strong> and train an NER model on it. 
-              Leveraging it, we decompose complex radiological reports into medical entities. 
-              We define the final metric by comparing the similarity based on the entity embeddings computed from language model and their corresponding types, 
-              forcing the metrics to focus on clinically critical statements. 
-              In experiments, our score demonstrates superior performance on aligning with human preference than other metrics, 
-              both on the existing public benchmarks and our new proposed <strong>RaTE-Eval</strong> benchmark.</left></p>
-
-      <br><hr>
-      <center><h2> Motivation </h2> </center>
-      <p>
-        In the literature, four main types of metrics have been adopted to assess the similarity between free-form texts in medical scenarios, as shown in Figure below. 
-        These include: 
-      </p>
-
-      <p>
-        (i) Metrics based on word overlaps, such as BLEU and ROUGE. 
-        Although intuitive, these metrics fail to capture negation or synonyms in sentences, thereby neglecting the assessment of semantic factuality; 
-      </p>
-
-      <p>
-        (ii) Metrics based on embedding similarities, like BERTScore. While achieving better semantic awareness, they do not focus on key medical terms, 
-        thus severely overlooking the local correctness of crucial conclusions; 
-      </p>
-
-      <p>
-        (iii) Metrics based on Named Entity Recognition (NER), such as RadGraph F1 and MEDCON. 
-        Although developed specifically for the medical domain, these metrics often fail to merge synonyms and predominantly focus on Chest X-ray reports; 
-      </p>
-
-      <p>
-        (iv) Metrics relying on large language models (LLMs). While these metrics are better aligned with human preferences, they suffer from potential subjective biases and are prohibitively expensive for large-scale evaluation.
-      </p>
-
-      <p>
-        <figure>
-          <img style="width:700px" src='./resources/teaser.png'>
-        </figure>
-      </p>
-      <p style="text-align:justify; text-justify:inter-ideograph;">
-            <left>
-              Existing evaluation metrics. We illustrate the limitations of current metrics. Blue boxes represent ground-truth reports; red and yellow boxes indicate correct and incorrect generated reports, respectively. 
-              The examples show that these metrics fail to identify opposite meanings and synonyms in the reports and are often disturbed by unrelated information.</left></p>
-      <br>
-
-      <hr>
-      <center> <h2> Results </h2> </center>
-      <p style="font-weight: bold; font-size: large;">
-        R1: Results in RaTE-Eval Benchmark -- task 1.
-      </p>
-      <p>
-      <figure>
-        <img style="width:700px" src='./resources/r1.png'>
-        <!-- <figcaption> 
-          Our metric exhibits the highest Pearson correlation coefficient with the radiologists' scoring. 
-          Note that the scores on the horizontal axis are experts counting various types of errors normalized by 
-          the potential error types that could occur in the given sentence, and subtracting this normalized score from 1 
-          to achieve a positive correlation.</figcaption> -->
-      </figure>
-    </p>
-    <p>
-      Our metric exhibits the highest Pearson correlation coefficient with the radiologists' scoring. 
-          Note that the scores on the horizontal axis are experts counting various types of errors normalized by 
-          the potential error types that could occur in the given sentence, and subtracting this normalized score from 1 
-          to achieve a positive correlation.
-    </p>
-
-
-
-    <p style="font-weight: bold; font-size: large;">
-      R2: Results in RaTE-Eval Benchmark -- task 2 & task 3.
-    </p>
-    <p>
-    <figure>
-      <img style="width:400px" src='./resources/t1.jpg'>
-      <!-- <figcaption> 
-        Our metric exhibits the highest Pearson correlation coefficient with the radiologists' scoring. 
-        Note that the scores on the horizontal axis are experts counting various types of errors normalized by 
-        the potential error types that could occur in the given sentence, and subtracting this normalized score from 1 
-        to achieve a positive correlation.</figcaption> -->
-    </figure>
-  </p>
-  <p>
-    Correlation coefficients with radiologists and accuracy for whether the synonym sentence can achieve higher scores than
-    the antonymous one on Synthetic Reports. In task 1: 
-    it can be observed that RaTEScore shows a significantly higher correlation with radiology experts compared to other non-composite metrics, 
-    across various measures of correlation. In task 2:
-    our model excels in managing synonym and antonym challenges, affirming its robustness in nuanced language processing within a medical context.
-
-  </p>
-
-
-
-
-  <p style="font-weight: bold; font-size: large;">
-    R3: Results in ReXVal dataset.
-  </p>
-  <p>
-  <figure>
-    <img style="width:450px" src='./resources/rexval.jpg'>
-    <!-- <figcaption> 
-      Our metric exhibits the highest Pearson correlation coefficient with the radiologists' scoring. 
-      Note that the scores on the horizontal axis are experts counting various types of errors normalized by 
-      the potential error types that could occur in the given sentence, and subtracting this normalized score from 1 
-      to achieve a positive correlation.</figcaption> -->
-  </figure>
-</p>
-<p>
-  RaTEScore demonstrated a Kendall correlation coefficient of 0.527 with the error counts, surpassing all existing metrics.
-</p>
-<br>
-<p>For more detailed ablation studies, please refer to our <a href="https://arxiv.org/abs/2312.16151"> paper</a>.</p>
-      <br>
-
-      <hr>
-      <center> <h2> General Pipeline </h2> </center>
-
- <p>
-  <figure>
-  <img style="width:750px" src='./resources/model.png'>
-  <figcaption><strong>Illustration of the Computation of RaTEScore.</strong> Given a reference radiology report \(x\), a candidate radiology report \(\hat{x}\), 
-    we first extract the medical entity and the corresponding entity type. Then, we compute the entity embedding and find the maximum cosine similarity. 
-    The RaTEScore is computed by the weighted similarity scores that consider the pairwise entity types.
-  </figcaption></p></figure>
-     
-  <p>The key intuition of our proposed RaTEScore is to compare two radiological reports at the entity level. Given two radiological reports, one is the ground truth for reference, denoting as \(x\), and the other candidate for evaluation as \(\hat{x}\). We aim to define a new similarity metric \(S(x, \hat{x})\), better reflecting the clinical consistency between the two.</p>
-
-  <p>As shown in Figure <a href="#fig:model">1</a>, our pipeline contains three major components:
-  namely, a medical entity recognition module \(\Phi_{\text{NER}}(\cdot)\),
-  a synonym disambuation encoding module \(\Phi_{\text{ENC}}(\cdot)\),
-  and a final scoring module \(\Phi_{\text{SIM}}(\cdot)\).</p>
+                 <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a>,
+                       <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+                       <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang </a>,
+                       <a href="https://weidixie.github.io/">Weidi Xie</a>
+                       <br>
+                       <em>Technical Report, 2023.</em><br>
+                       In this paper, We build up an academically accessible, large-scale diagnostic dataset that encompasses 5568 disorders linked with 930 unique ICD-10-CM codes, 
+                       containing 39,026 cases (192,675 scans). Also, We present a novel architecture that enables to process arbitrary number of input scans, from various imaging 
+                       modalities and initialize a new benchmark for multi-modal multi-anatomy long-tailed diagnosis.
+                     </td>
+            </tr>
+            <br>
+            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
+                     <td style="padding:0px;width:25%;vertical-align:middle">
+                       <img src="images/GPT4V_eval.png" width="320" height="180" style="border-style: none">
+                     </td>
+                     <td style="padding:10px;width:75%;vertical-align:middle">
+                       <a href="https://drive.google.com/file/d/1kPDWgwpv8XlLu5sBuO2mRyylp0PDD6j5/view">
+                         <papertitle>Can GPT-4V(ision) Serve Medical Applications ? Case Studies on GPT-4V for Multimodal Medical Diagnosis</papertitle>
+                       </a>
+                 <br>
+                 <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
+                 <a>Jiayu Lei*</a>,
+                 <a>Qiaoyu Zheng*</a>,
+                 <strong>Weike Zhao*</strong>,
+                 <a>Weixiongt Lin*</a>,
+                 <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang*</a>,
+                 <a>Xiao Zhou*</a>,
+                 <a>Ziheng Zhao*</a>,
+                       <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+                       <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang </a>,
+                       <a href="https://weidixie.github.io/">Weidi Xie</a>
+                       <br>
+                       <em>Technical Report, 2023.</em><br>
+                       In this report, we evaluate GPT-4V for multimodal medical diagnosis at case studies, covering 17 human body systems, across 8 clinical imaging modalities. As the cases shown, GPT-4V is still far from clinical usage.
+                      </td>
+              </tr>
   
-  <p>First, we extract the medicial entities from each piece of radiological text, then encode each entity into embeddings that are aware of medical synonyms, formulated as:</p>
-  <div>
-    \[
-    \mathbf{F} = \Phi_{\text{ENC}}(\Phi_{\text{NER}}(x)),
-    \]
-    where \(\mathbf{F}\) contains a set of entity embeddings.
-  </div>
-  <div>
-    Similarly, we can get \(\mathbf{\hat{F}}\) for \(\hat{x}\). Then, we can calculate the final similarity on the entity embeddings as:
-    \[
-    S(x, \hat{x}) = \Phi_{\text{SCO}}(\mathbf{F}, \mathbf{\hat{F}}).
-    \]
-  </div>
-  <p>The detail of each components please refer to our paper.</p>
-
-      <br>
-
-      <hr>
-      <center> <h2> RaTE-NER </h2> </center>
-
-      <!-- <div class="image-container">
-        <img src="./resources/data.jpg" alt="Image 1">
-        <img src="./resources/data_curation_3.png" alt="Image 2">
-      </div> -->
-      <p>
-      <figure>
-        <img style="width:400px" src='./resources/data.jpg'>
-        <figcaption>RaTE-NER Dataset Statistics: The dataset consists of two data sources: MIMIC-IV and Radiopaedia. 
-          # represents specific types of medical entities.  For "Reports" line, the numbers in "()" are number of source reports.   
-          For the "Entities" and # lines, the numbers in "()" are counts of non-redundant entities.</figcaption>
-      </figure>
-    </p>
-    <p>
-      To facilitate training our medical entity recognition module, we constructed a RaTE-NER dataset, a large-scale, radiological named entity recognition (NER) dataset. 
-      This dataset comprises 13,235 manually annotated sentences from 1,816 reports within the MIMIC-IV database, 
-      adhering to our predefined entity-labeling framework which spans 9 imaging modalities and 23 anatomical regions, ensuring broad coverage. 
-    </p>
-    <p>
-      Given that reports in MIMIC-IV are more likely to cover common diseases,
-      and may not well represent rarer conditions, we further enriched the dataset with 33,605 sentences from the 17432 reports available on 
-      Radiopaedia, by leveraging GPT-4 and other medical knowledge libraries to capture intricacies and nuances of less common diseases and abnormalities. 
-      More details can be found in the Appendix. 
-      We manually labeled 3,529 sentences to create a test set,  as shown in Table, the RaTE-NER dataset offers a level of granularity not seen in previous datasets, 
-      with comprehensive entity annotations within sentences. This enhanced granularity enables to train 
-      models for medical entity recognition within our analytical pipeline.
-    </p>
-    <p>
-      <figure>
-        <img style="width:400px" src='./resources/data_curation_3.png'>
-        <figcaption>Auto-annotation Part (Radiopaedia) in RaTE-NER Dataset.</figcaption>
-      </figure>
-    </p>
-    <br>
-
-    <hr>
-    <center> <h2> RaTE-Eval Benchmark </h2> </center>
-    <p>
-      To effectively evaluate the alignment between automatic evaluation metrics and radiologists' assessments in medical text generation tasks, 
-      we have established a comprehensive benchmark, RaTE-Eval, that encompasses three tasks, each with its official test set for fair comparison, 
-      as detailed below. The comparison of RaTE-Eval Benchmark and existed radiology report evaluation Benchmark is listed in Table.
-    </p>
-
-    <p>
-      <figure>
-        <img style="width:700px" src='./resources/eval.jpg'>
-        <figcaption>RaTE-NER Dataset Statistics: The dataset consists of two data sources: MIMIC-IV and Radiopaedia. 
-          # represents specific types of medical entities.  For "Reports" line, the numbers in "()" are number of source reports.   
-          For the "Entities" and # lines, the numbers in "()" are counts of non-redundant entities.</figcaption>
-      </figure>
-    </p>
-   
-    <p>For more detailed about the subtasks in RaTE-Eval Benchmark, please refer to our <a href="https://arxiv.org/abs/2312.16151"> paper</a>.</p>
-
-    <br>
-      <hr>
-      <center><h2>BibTeX</h2></center>
-      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-        @article{zheng2023large,
-          title={Large-scale Long-tailed Disease Diagnosis on Radiology Images},
-          author={Zheng, Qiaoyu and Zhao, Weike and Wu, Chaoyi and Zhang, Xiaoman and Zhang, 
-            Ya and Wang, Yanfeng and Xie, Weidi},
-          journal={arXiv preprint arXiv:2312.16151},
-          year={2023}
-        }
-              </code>
-          </pre>
-        </div>      
-      </div>
-
-      
-      <br>
-<br>
-</body>
+         
+                 
+          </tbody></table>
+          <br>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0;width:100%;vertical-align:middle">
+                <h2>Hobby</h2>
+              </td>
+            </tr>
+          </table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <p><span class="emoji" style='font-size:30px;'>&#9975;</span>
+                <!-- <span class="emoji" style='font-size:30px;'>&#127935;</span> -->
+                <span class="emoji" style='font-size:30px;'>&#127938;</span>
+                <span class="emoji" style='font-size:30px;'>&#9976;</span>
+                <span class="emoji" style='font-size:30px;'>&#127916;</span>
+                <span class="emoji" style='font-size:30px;'>&#127919;</span>
+                <span class="emoji" style='font-size:30px;'>&#127925;</span>
+                <span class="emoji" style='font-size:30px;'>&#127931;</span>
+                <span class="emoji" style='font-size:30px;'>&#127939;</span>
+                <span class="emoji" style='font-size:30px;'>&#127946;</span>
+                <span class="emoji" style='font-size:30px;'>&#127955;</span>
+                <span class="emoji" style='font-size:30px;'>&#127992;</span>
+                <span class="emoji" style='font-size:30px;'>&#128248;</span>
+                <span class="emoji" style='font-size:30px;'>&#129336;</span>
+                <span class="emoji" style='font-size:30px;'>&#127956;</span>
+              </p>
+            </tr>
+            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script>
+          </table>
+          <br>
+          <br>
+          <br>
+          <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script> -->
+  </body>
 </html>
