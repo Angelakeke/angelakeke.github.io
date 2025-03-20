@@ -2,178 +2,465 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Weike Zhao (赵唯珂)</title>
-
     <meta name="author" content="Weike Zhao">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/robot.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #122F51;
+        --secondary-color: #3e6990;
+        --accent-color: #1e88e5;
+        --background-color: #ffffff;
+        --text-color: #333333;
+        --light-gray: #f5f5f5;
+        --border-color: #e0e0e0;
+      }
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        background-color: var(--background-color);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+      
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 30px;
+      }
+      
+      .header-content {
+        display: flex;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      .profile-image {
+        width: 230px;
+        height: 230px;
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.02);
+      }
+      
+      .bio {
+        flex: 1;
+      }
+      
+      h1 {
+        font-family: 'Lora', serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+      
+      h2 {
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin: 30px 0 20px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+        color: #444;
+      }
+      
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin: 15px 0;
+      }
+      
+      .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 15px;
+        background-color: var(--light-gray);
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+      }
+      
+      .social-links a:hover {
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      
+      .social-links i {
+        font-size: 1rem;
+      }
+      
+      .research-item {
+        display: flex;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--border-color);
+        gap: 25px;
+      }
+      
+      .research-item:last-child {
+        border-bottom: none;
+      }
+      
+      .research-image {
+        width: 240px;
+        min-width: 240px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .research-image img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      
+      .research-image img:hover {
+        transform: scale(1.03);
+      }
+      
+      .research-content {
+        flex: 1;
+      }
+      
+      .paper-title {
+        font-family: 'Lora', serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+      
+      .authors {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: #555;
+      }
+      
+      .publication {
+        font-style: italic;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        color: #666;
+      }
+      
+      .author-highlight {
+        font-weight: 600;
+        color: #444;
+      }
+      
+      .hobby-section {
+        text-align: center;
+        margin: 40px 0;
+        padding: 30px;
+        background-color: var(--light-gray);
+        border-radius: 8px;
+      }
+      
+      .emoji-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      
+      .emoji {
+        font-size: 28px;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      
+      .emoji:hover {
+        transform: scale(1.1);
+      }
+      
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.9rem;
+        color: #777;
+      }
+      
+      .contact-info {
+        background-color: var(--light-gray);
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-top: 15px;
+      }
+      
+      .contact-info p {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .contact-info i {
+        color: var(--secondary-color);
+        width: 20px;
+      }
+      
+      .footnote {
+        font-size: 0.9rem;
+        color: #666;
+        border-left: 3px solid var(--accent-color);
+        padding-left: 15px;
+        margin: 15px 0;
+      }
+      
+      @media (max-width: 900px) {
+        .header-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .profile-image {
+          margin-bottom: 25px;
+        }
+        
+        .social-links {
+          justify-content: center;
+        }
+        
+        .research-item {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .research-image {
+          width: 100%;
+          max-width: 350px;
+          min-width: unset;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:0%;width:60%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                Weike Zhao (赵唯珂) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </p>
-                <p>I'm a PhD candidate at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University (SJTU)</a> , 
-                  advised by <a href="https://weidixie.github.io/index.html">Prof. Weidi Xie</a> and <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Prof. Ya Zhang</a>. 
-                
-                  <!-- I graduated with a bachelor's degree in Information Engineering from the School of Communication Engineering at Xidian University in June 2022. -->
-                </p>
-                <p>
-                  My current research interests include but not limit to Artificial Intelligence for Medical (AI4Med) and Multimodal Perception.
-                </p>
-                <p>
-                  E-mail: zwk0629[at]sjtu.edu.cn <br>
-                  WeChat: zhaoweike2000
-                </p>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <img src="images/Weikezhao.jpeg" alt="Weike Zhao" class="profile-image">
+          <div class="bio">
+            <h1>Weike Zhao (赵唯珂)</h1>
+            <p>I'm a PhD candidate at <a href="https://www.sjtu.edu.cn/">Shanghai Jiao Tong University (SJTU)</a>, 
+              advised by <a href="https://weidixie.github.io/index.html">Prof. Weidi Xie</a> and <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Prof. Ya Zhang</a>.</p>
+            <p>My current research interests include but are not limited to Artificial Intelligence for Medical (AI4Med) and Multimodal Perception.</p>
+            
+            <div class="contact-info">
+              <p><i class="fas fa-envelope"></i> zwk0629[at]sjtu.edu.cn</p>
+              <p><i class="fab fa-weixin"></i> zhaoweike2000</p>
+            </div>
+            
+            <div class="social-links">
+              <a href="mailto:zwk0629@sjtu.edu.cn"><i class="fas fa-envelope"></i> Email</a>
+              <a href="https://scholar.google.com/citations?user=yFSlxpwAAAAJ&hl=zh-CN&oi=ao"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+              <a href="https://github.com/Angelakeke"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </header>
 
-                <p style="text-align:center">
-                  <a href="zwk0629@sjtu.edu.com">Email</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=yFSlxpwAAAAJ&hl=zh-CN&oi=ao">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/Angelakeke">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/Weikezhao.jpeg">
-                  <img style="width:100%;max-width:100%;object-fit: cover; " alt="profile photo" src="images/Weikezhao.jpeg" class="hoverZoomLink">
-                </a>
-                </td>
-              </tr>
-               </tbody></table>
+      <section id="research">
+        <h2>Research</h2>
+        <div class="footnote">
+          <sup>*</sup> denotes equal contribution, and <sup>†</sup> denotes corresponding author.
+        </div>
+        
+        <div class="research-item">
+          <div class="research-image">
+            <img src="image/MedRBench.jpg" alt="MedRBench">
+          </div>
+          <div class="research-content">
+            <a href="https://arxiv.org/pdf/2503.04691">
+              <div class="paper-title">Quantifying the Reasoning Abilities of LLMs on Real-world Clinical Cases</div>
+            </a>
+            <div class="authors">
+              <a>Pengcheng Qiu*</a>,
+              <a>Chaoyi Wu*</a>,
+              <a>Pengcheng Qiu</a>,
+              <a>Shuyu Liu</a>,
+              <span class="author-highlight">Weike Zhao</span>,
+              <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang</a>,
+              <a href="https://weidixie.github.io/">Weidi Xie</a>
+            </div>
+            <div class="publication">Technical Report, 2025</div>
+            <p>In this study, we quantitatively evaluate the free-text reasoning abilities of various state-of-the-art LLMs, such as DeepSeek-R1 and OpenAI-o3-mini, in assessment recommendation, diagnostic decision, and treatment planning.</p>
+          </div>
+        </div>
+        
+        <div class="research-item">
+          <div class="research-image">
+            <img src="./RaTEScore/resources/model.png" alt="RaTEScore">
+          </div>
+          <div class="research-content">
+            <a href="https://angelakeke.github.io/RaTEScore/">
+              <div class="paper-title">RaTEScore: A Metric for Radiology Report Generation</div>
+            </a>
+            <div class="authors">
+              <span class="author-highlight">Weike Zhao</span>,
+              <a href="https://chaoyi-wu.github.io/">Chaoyi Wu</a>,
+              <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang†</a>,
+              <a href="https://weidixie.github.io/">Weidi Xie†</a>
+            </div>
+            <div class="publication">EMNLP 2024 main paper</div>
+            <p>RaTEScore is a novel, entity-aware metric to assess the quality of medical reports generated by AI models. It emphasizes crucial medical entities such as diagnostic outcomes and anatomical details, and is robust against complex medical synonyms and sensitive to negation expressions. The evaluations demonstrate that RaTEScore aligns more closely with human preference than existing metrics.</p>
+          </div>
+        </div>
+        
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/RP3D-Diag.png" alt="RP3D-Diag">
+          </div>
+          <div class="research-content">
+            <a href="https://www.nature.com/articles/s41467-024-54424-6">
+              <div class="paper-title">Large-scale Long-tailed Disease Diagnosis on Radiology Images</div>
+            </a>
+            <div class="authors">
+              <a href="https://github.com/qiaoyu-zheng/">Qiaoyu Zheng*</a>,
+              <span class="author-highlight">Weike Zhao*</span>,
+              <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
+              <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang†</a>,
+              <a href="https://weidixie.github.io/">Weidi Xie†</a>
+            </div>
+            <div class="publication">Nature Communication 2024</div>
+            <p>In this paper, we build up an academically accessible, large-scale diagnostic dataset that encompasses 5568 disorders linked with 930 unique ICD-10-CM codes, containing 39,026 cases (192,675 scans). Also, we present a novel architecture that enables processing arbitrary number of input scans from various imaging modalities and initialize a new benchmark for multi-modal multi-anatomy long-tailed diagnosis.</p>
+          </div>
+        </div>
+        
+        <div class="research-item">
+          <div class="research-image">
+            <img src="images/GPT4V_eval.png" alt="GPT4V Evaluation">
+          </div>
+          <div class="research-content">
+            <a href="https://drive.google.com/file/d/1kPDWgwpv8XlLu5sBuO2mRyylp0PDD6j5/view">
+              <div class="paper-title">Can GPT-4V(ision) Serve Medical Applications? Case Studies on GPT-4V for Multimodal Medical Diagnosis</div>
+            </a>
+            <div class="authors">
+              <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
+              <a>Jiayu Lei*</a>,
+              <a>Qiaoyu Zheng*</a>,
+              <span class="author-highlight">Weike Zhao*</span>,
+              <a>Weixiongt Lin*</a>,
+              <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang*</a>,
+              <a>Xiao Zhou*</a>,
+              <a>Ziheng Zhao*</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
+              <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang</a>,
+              <a href="https://weidixie.github.io/">Weidi Xie†</a>
+            </div>
+            <div class="publication">Technical Report, 2023</div>
+            <p>In this report, we evaluate GPT-4V for multimodal medical diagnosis at case studies, covering 17 human body systems, across 8 clinical imaging modalities. As the cases shown, GPT-4V is still far from clinical usage.</p>
+          </div>
+        </div>
+      </section>
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-bottom:0px;margin-top:0px;"><tbody>
-            <tr>
-            <td style="padding:0px;width:100%;vertical-align:bottom">
-              <h2>Research</h2>        
-              <!-- <heading><b></bold>Research</b></heading> -->
-              <p>
-                <sup>*</sup> denotes equal contribution, and
-                <sup>†</sup> denotes corresponding author.
-              </p>
-            </td></tr>   
-             </tbody></table>
+      <section id="hobby" class="hobby-section">
+        <h2>Hobby</h2>
+        <div class="emoji-container">
+          <div class="emoji">&#9975;</div>
+          <div class="emoji">&#127938;</div>
+          <div class="emoji">&#9976;</div>
+          <div class="emoji">&#127916;</div>
+          <div class="emoji">&#127919;</div>
+          <div class="emoji">&#127925;</div>
+          <div class="emoji">&#127931;</div>
+          <div class="emoji">&#127939;</div>
+          <div class="emoji">&#127946;</div>
+          <div class="emoji">&#127955;</div>
+          <div class="emoji">&#127992;</div>
+          <div class="emoji">&#128248;</div>
+          <div class="emoji">&#129336;</div>
+          <div class="emoji">&#127956;</div>
+          <div class="emoji">&#9978;</div>
+          <div class="emoji">&#127921;</div>
+          <div class="emoji">&#127934;</div>
+        </div>
+      </section>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:0px;"><tbody>
-            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-              <td style="padding:0px;width:25%;vertical-align:middle">
-                <img src="./RaTEScore/resources/model.png" width="320" height="100" style="border-style: none">
-              </td>
-              <td style="padding:10px;width:75%;vertical-align:top">
-                <a href="https://angelakeke.github.io/RaTEScore/">
-                  <papertitle>RaTEScore: A Metric for Radiology Report Generation</papertitle>
-                </a>
-               <br>
-               <strong>Weike Zhao</strong>,
-               <a href="https://chaoyi-wu.github.io/">Chaoyi Wu</a>,
-               <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a>,
-                     <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
-                     <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang† </a>,
-                     <a href="https://weidixie.github.io/">Weidi Xie†</a>
-                     <br>
-                     <em>EMNLP 2024 main paper</em><br>
-                     RaTEScore is a novel, entity-aware metric to assess the quality of medical reports generated by AI models. 
-                     It emphasizes crucial medical entities such as diagnostic outcomes and anatomical details, 
-                     and is robust against complex medical synonyms and sensitive to negation expressions. 
-                     The evaluations demonstrate that RaTEScore aligns more closely with human preference than existing metrics.
-                   </td>
-          </tr>
-          <br>
-            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-                <td style="padding:0px;width:25%;vertical-align:middle">
-                  <img src="images/RP3D-Diag.png" width="320" height="180" style="border-style: none">
-                </td>
-                <td style="padding:10px;width:75%;vertical-align:middle">
-                  <a href="https://www.nature.com/articles/s41467-024-54424-6">
-                    <papertitle>Large-scale Long-tailed Disease Diagnosis on Radiology Images</papertitle>
-                  </a>
-                 <br>
-                 <a href="https://github.com/qiaoyu-zheng/">Qiaoyu Zheng*</a>,
-                 <strong>Weike Zhao*</strong>,
-                 <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
-              
-                 <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang</a>,
-                       <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
-                       <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang† </a>,
-                       <a href="https://weidixie.github.io/">Weidi Xie†</a>
-                       <br>
-                       <em>Nature Communication 2024</em><br>
-                       In this paper, We build up an academically accessible, large-scale diagnostic dataset that encompasses 5568 disorders linked with 930 unique ICD-10-CM codes, 
-                       containing 39,026 cases (192,675 scans). Also, We present a novel architecture that enables to process arbitrary number of input scans, from various imaging 
-                       modalities and initialize a new benchmark for multi-modal multi-anatomy long-tailed diagnosis.
-                     </td>
-            </tr>
-            <br>
-            <tr onmouseout="smerf_stop()" onmouseover="smerf_start()">
-                     <td style="padding:0px;width:25%;vertical-align:middle">
-                       <img src="images/GPT4V_eval.png" width="290" height="180" style="border-style: none">
-                     </td>
-                     <td style="padding:10px;width:75%;vertical-align:middle">
-                       <a href="https://drive.google.com/file/d/1kPDWgwpv8XlLu5sBuO2mRyylp0PDD6j5/view">
-                         <papertitle>Can GPT-4V(ision) Serve Medical Applications ? Case Studies on GPT-4V for Multimodal Medical Diagnosis</papertitle>
-                       </a>
-                 <br>
-                 <a href="https://chaoyi-wu.github.io/">Chaoyi Wu*</a>,
-                 <a>Jiayu Lei*</a>,
-                 <a>Qiaoyu Zheng*</a>,
-                 <strong>Weike Zhao*</strong>,
-                 <a>Weixiongt Lin*</a>,
-                 <a href="https://xiaoman-zhang.github.io/">Xiaoman Zhang*</a>,
-                 <a>Xiao Zhou*</a>,
-                 <a>Ziheng Zhao*</a>,
-                       <a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a>,
-                       <a href="https://mediabrain.sjtu.edu.cn/members/">Yanfeng Wang </a>,
-                       <a href="https://weidixie.github.io/">Weidi Xie†</a>
-                       <br>
-                       <em>Technical Report, 2023.</em><br>
-                       In this report, we evaluate GPT-4V for multimodal medical diagnosis at case studies, covering 17 human body systems, across 8 clinical imaging modalities. As the cases shown, GPT-4V is still far from clinical usage.
-                      </td>
-              </tr>
-  
-         
-                 
-          </tbody></table>
-          <br>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0;width:100%;vertical-align:middle">
-                <h2>Hobby</h2>
-              </td>
-            </tr>
-          </table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <p><span class="emoji" style='font-size:30px;'>&#9975;</span>
-                <!-- <span class="emoji" style='font-size:30px;'>&#127935;</span> -->
-                <span class="emoji" style='font-size:30px;'>&#127938;</span>
-                <span class="emoji" style='font-size:30px;'>&#9976;</span>
-                <span class="emoji" style='font-size:30px;'>&#127916;</span>
-                <span class="emoji" style='font-size:30px;'>&#127919;</span>
-                <span class="emoji" style='font-size:30px;'>&#127925;</span>
-                <span class="emoji" style='font-size:30px;'>&#127931;</span>
-                <span class="emoji" style='font-size:30px;'>&#127939;</span>
-                <span class="emoji" style='font-size:30px;'>&#127946;</span>
-                <span class="emoji" style='font-size:30px;'>&#127955;</span>
-                <span class="emoji" style='font-size:30px;'>&#127992;</span>
-                <span class="emoji" style='font-size:30px;'>&#128248;</span>
-                <span class="emoji" style='font-size:30px;'>&#129336;</span>
-                <span class="emoji" style='font-size:30px;'>&#127956;</span>
-                <span class="emoji" style='font-size:30px;'>&#9978;</span>
-                <span class="emoji" style='font-size:30px;'>&#127921;</span>
-              </p>
-            </tr>
-            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script>
-          </table>
-          <br>
-          <br>
-          <br>
-          <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script> -->
+      <div class="footer">
+        <div id="clustrmaps">
+          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script>
+        </div>
+        <p>© 2025 Weike Zhao. Last updated: March 2025</p>
+      </div>
+    </div>
   </body>
 </html>
