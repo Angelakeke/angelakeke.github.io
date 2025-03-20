@@ -163,14 +163,20 @@
       .research-image {
         width: 240px;
         min-width: 240px;
+        height: 150px; /* 设置固定高度 */
         border-radius: 6px;
         overflow: hidden;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
       }
       
       .research-image img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: contain; /* 保持图片比例，确保完整显示 */
         transition: transform 0.3s ease;
       }
       
@@ -302,6 +308,7 @@
           width: 100%;
           max-width: 350px;
           min-width: unset;
+          height: 200px; /* 增加移动端显示高度 */
           margin-bottom: 20px;
         }
       }
