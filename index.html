@@ -168,20 +168,24 @@
     .pub-body { flex: 1; min-width: 0; }
 
     .pub-meta {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
-      margin-bottom: 8px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 9px;
+      margin-bottom: 9px;
     }
     .venue {
-      font-family: var(--sans); font-size: .72rem; letter-spacing: .06em;
-      padding: 3px 9px; border-radius: 3px;
-      background: var(--panel); color: var(--ink-soft);
-      border: 1px solid var(--line);
+      font-family: var(--sans); font-size: .78rem; font-weight: 600;
+      line-height: 1.35; letter-spacing: .035em; white-space: nowrap;
+      padding: 4px 10px; border-radius: 4px;
+      background: var(--teal-tint); color: var(--teal-deep);
+      border: 1px solid rgba(15, 124, 116, .22);
     }
     .venue.featured {
       background: var(--amber-tint); color: var(--amber);
-      border-color: #ecd9b5; font-weight: 500;
+      border-color: #e6cfa4;
     }
-    .year { font-family: var(--sans); font-size: .72rem; color: var(--ink-soft); }
+    .year {
+      font-family: var(--sans); font-size: .75rem; font-weight: 500;
+      color: var(--ink-soft);
+    }
 
     .pub-title {
       font-family: var(--serif); font-weight: 600; font-size: 1.13rem;
