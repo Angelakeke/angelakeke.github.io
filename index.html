@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --ink:        #11242e;   /* deep clinical ink */
@@ -23,7 +23,6 @@
       --line:       #dde7e5;
       --amber:      #b06e1d;   /* featured-venue badge */
       --amber-tint: #faf3e6;
-      --mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
       --sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
       --serif: 'Spectral', Georgia, serif;
     }
@@ -66,7 +65,7 @@
     .brand:hover { text-decoration: none; color: var(--teal-deep); }
     .nav-links { display: flex; gap: 26px; }
     .nav-links a {
-      font-family: var(--mono); font-size: .78rem; letter-spacing: .12em;
+      font-family: var(--sans); font-size: .78rem; letter-spacing: .12em;
       text-transform: uppercase; color: var(--ink-soft);
     }
     .nav-links a:hover { color: var(--teal); text-decoration: none; }
@@ -88,7 +87,7 @@
     .news-list li:last-child { border-bottom: none; }
     .news-list strong { color: var(--ink); font-weight: 600; }
     .news-date {
-      font-family: var(--mono); font-size: .78rem; color: var(--teal);
+      font-family: var(--sans); font-size: .78rem; color: var(--teal);
       flex-shrink: 0; min-width: 62px;
     }
 
@@ -109,7 +108,7 @@
     .links-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
     .links-row a {
       display: inline-flex; align-items: center; gap: 8px;
-      font-family: var(--mono); font-size: .8rem;
+      font-family: var(--sans); font-size: .8rem;
       padding: 7px 14px;
       border: 1px solid var(--line); border-radius: 4px;
       color: var(--ink-soft); background: #fff;
@@ -146,7 +145,7 @@
       letter-spacing: -.005em;
     }
     .footnote {
-      font-family: var(--mono); font-size: .76rem; color: var(--ink-soft);
+      font-family: var(--sans); font-size: .76rem; color: var(--ink-soft);
       margin: 6px 0 26px;
     }
 
@@ -173,7 +172,7 @@
       margin-bottom: 8px;
     }
     .venue {
-      font-family: var(--mono); font-size: .72rem; letter-spacing: .06em;
+      font-family: var(--sans); font-size: .72rem; letter-spacing: .06em;
       padding: 3px 9px; border-radius: 3px;
       background: var(--panel); color: var(--ink-soft);
       border: 1px solid var(--line);
@@ -182,7 +181,7 @@
       background: var(--amber-tint); color: var(--amber);
       border-color: #ecd9b5; font-weight: 500;
     }
-    .year { font-family: var(--mono); font-size: .72rem; color: var(--ink-soft); }
+    .year { font-family: var(--sans); font-size: .72rem; color: var(--ink-soft); }
 
     .pub-title {
       font-family: var(--serif); font-weight: 600; font-size: 1.13rem;
@@ -204,7 +203,7 @@
     .media-links {
       display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
       margin-top: 12px;
-      font-family: var(--mono); font-size: .72rem; color: var(--ink-soft);
+      font-family: var(--sans); font-size: .72rem; color: var(--ink-soft);
     }
     .media-links > span { margin-right: 2px; font-weight: 500; color: var(--ink); }
     .media-links a {
@@ -233,7 +232,7 @@
       margin-top: 36px; padding: 26px 0 40px;
       border-top: 1px solid var(--line);
       text-align: center;
-      font-family: var(--mono); font-size: .76rem; color: var(--ink-soft);
+      font-family: var(--sans); font-size: .76rem; color: var(--ink-soft);
     }
 
     /* ---------- Responsive ---------- */
