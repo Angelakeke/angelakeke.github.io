@@ -216,6 +216,22 @@
 
     .pub-body > p { font-size: .92rem; color: var(--ink-soft); }
 
+    .media-links {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+      margin-top: 12px;
+      font-family: var(--mono); font-size: .72rem; color: var(--ink-soft);
+    }
+    .media-links > span { margin-right: 2px; font-weight: 500; color: var(--ink); }
+    .media-links a {
+      padding: 2px 8px;
+      border: 1px solid var(--line); border-radius: 3px;
+      background: #fff; color: var(--ink-soft);
+    }
+    .media-links a:hover {
+      border-color: var(--teal); color: var(--teal-deep);
+      background: var(--teal-tint); text-decoration: none;
+    }
+
     /* ---------- Beyond research ---------- */
     .hobby-strip {
       margin-top: 18px; padding: 22px 24px;
@@ -342,6 +358,12 @@
             <a href="https://weidixie.github.io/">Weidi Xie†</a>
           </div>
           <p>We introduce DeepRare, the first rare disease diagnosis agentic system powered by a large language model (LLM), capable of processing heterogeneous clinical inputs.</p>
+          <div class="media-links" aria-label="Featured media coverage">
+            <span>Featured in</span>
+            <a href="https://www.nature.com/articles/d41586-026-00290-9">Nature News &amp; Views</a>
+            <a href="https://news.cctv.com/2026/02/19/ARTItl28jleHTtohKkgh0GBg260219.shtml">CCTV News</a>
+            <a href="https://thenextweb.com/news/how-an-ai-system-beat-experienced-doctors-at-diagnosing-rare-diseases">The Next Web</a>
+          </div>
         </div>
       </div>
 
